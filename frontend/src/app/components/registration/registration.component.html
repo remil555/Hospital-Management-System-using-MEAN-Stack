@@ -1,0 +1,110 @@
+<div
+  class="w-full flex justify-center items-center h-screen overflow-y-hidden"
+>
+  <div class="flex justify-center items-start flex-1 pt-12">
+    <div
+      class="max-w-lg w-full h-auto p-6 bg-white border border-gray-200 
+      rounded-lg shadow ml-2 mt-2"
+    >
+      <h2
+        class="text-center text-2xl font-semibold leading-7 
+        text-blue-600 mb-2"
+      >
+        User Registration
+      </h2>
+      <form class="max-w-md mx-auto" (ngSubmit)="onRegisterClick()">
+        <div class="block mb-5">
+          <label
+            for="name"
+            class="block mb-2 text-sm font-medium text-gray-600 required"
+            >Full Name</label
+          >
+          <input
+            type="text"
+            [(ngModel)]="name"
+            name="name"
+            id="name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm 
+            rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full 
+            p-2.5"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        <div class="block mb-5">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-600 required"
+            >Email</label
+          >
+          <input
+            type="email"
+            [(ngModel)]="email"
+            name="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm 
+            rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full 
+            p-2.5"
+            placeholder="Enter your email address"
+            required
+          />
+        </div>
+        <div class="block mb-5">
+          <label
+            for="password"
+            class="block mb-2 text-sm font-medium text-gray-600 required"
+            >Password</label
+          >
+          <input
+            type="password"
+            [(ngModel)]="password"
+            name="password"
+            id="password"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm 
+            rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full 
+            p-2.5"
+            placeholder="Enter a password"
+            required
+          />
+        </div>
+        <div class="block mb-5">
+          <label
+            for="confirmPassword"
+            class="block mb-2 text-sm font-medium text-gray-600 required"
+            >Confirm Password</label
+          >
+          <input
+            type="password"
+            [(ngModel)]="confirmPassword"
+            name="confirmPassword"
+            id="confirmPassword"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm 
+            rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full 
+            p-2.5"
+            placeholder="Confirm your password"
+            required
+          />
+        </div>
+        <div class="block">
+          <button
+            type="submit"
+            class="w-full block text-white bg-blue-700 hover:bg-blue-800 
+            focus:ring-4 focus:ring-blue-300 font-medium rounded-lg 
+            text-sm px-5 py-2.5"
+          >
+            Register
+          </button>
+          <p class="mt-4 text-center text-sm text-gray-600">
+            Already registered? 
+            <button 
+                (click)="goToLogin()" 
+                class="text-blue-600 hover:underline font-medium"
+            >
+                Login
+            </button>
+        </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

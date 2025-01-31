@@ -1,0 +1,46 @@
+<div class="min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+
+  <div class="relative bg-gradient-to-r from-green-700 to-green-500 shadow-lg py-6 px-8 flex items-center justify-between fixed w-full top-0 left-0 z-50">
+    <div class="flex items-center space-x-4">
+      <img src="https://img.freepik.com/free-vector/hospital-logo-design-vector-medical-cross_53876-136743.jpg?semt=ais_hybrid" alt="CIMAR Logo" class="h-12 w-12 md:h-16 md:w-16 object-contain"  (click)="navigateToDashboard()">
+      <h2 class="text-2xl md:text-4xl font-extrabold text-white tracking-wide uppercase">
+        CIMAR Hospital Management System
+      </h2>
+    </div>
+
+    <button *ngIf="showLogoutButton" (click)="logout()" class="px-6 py-3 text-white bg-red-600 rounded-lg shadow-md hover:bg-red-700 transition duration-300 ease-in-out">
+      Logout
+    </button>
+
+  </div>
+
+  
+  <nav *ngIf="showNavbar" class="bg-white shadow-lg py-2 mt-3 mx-auto w-11/12 rounded-lg">
+    <ul class="flex items-center justify-center space-x-6 text-lg font-medium text-gray-600">
+      <li>
+        <button class="nav-item px-6 py-3 text-blue-600 border-b-4 border-blue-600 rounded-lg font-semibold transition duration-300 ease-in-out"
+          id="nav-appointments" (click)="navClick('appointments')">
+          Appointments
+        </button>
+      </li>
+      <li>
+        <button id="nav-doctors" (click)="navClick('doctors')"
+          class="nav-item px-6 py-3 border-b-4 border-transparent rounded-lg hover:text-gray-800 hover:border-blue-400 transition duration-300 ease-in-out">
+          Doctors
+        </button>
+      </li>
+      <li>
+        <button id="nav-patients" (click)="navClick('patients')"
+          class="nav-item px-6 py-3 border-b-4 border-transparent rounded-lg hover:text-gray-800 hover:border-blue-400 transition duration-300 ease-in-out">
+          Patients
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container mx-auto p-6">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+<app-footer></app-footer>
